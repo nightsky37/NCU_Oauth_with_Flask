@@ -6,7 +6,7 @@
 
 EX: http://127.0.0.1:5000/auth
 
-```
+```python
 #-*- encoding: UTF-8 -*-
 
 from flask import Flask, session, request, redirect, jsonify
