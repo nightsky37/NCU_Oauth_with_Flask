@@ -2,7 +2,9 @@
 
 先到 Portal 的 Apps 申請一個新的應用程式，取得 client id 與 client secret
 
-在 App 的編輯頁面設定 Return To Address (也就是 Redirect_uri ) 為自己的 domain 網址。 EX: http://127.0.0.1:5000/auth
+在 App 的編輯頁面設定 Return To Address (也就是 Redirect_uri ) 為自己的 domain 網址。 
+
+EX: http://127.0.0.1:5000/auth
 
 ```
 #-*- encoding: UTF-8 -*-
