@@ -62,7 +62,7 @@ if __name__ == "__main__":
 
 到 https://portal.ncu.edu.tw/about/howto 查看自己想要取得的 scope 
 
-在 oauth.py 中 ``` get_cdoe_url ``` 的 scope=加上自己想要的項目 (項目要兩個以上，只有一個會出錯，我也不知道為什麼= =)
+在 oauth.py 中 ``` get_cdoe_url ``` 的 scope=加上自己想要的項目 (項目要兩個以上，只有一個會出錯，我也不知道為什麼)
 
 p.s.記得在 Portal Apps 的介面勾選自己想開通什麼 scopes 
 ```python  
