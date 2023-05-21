@@ -15,8 +15,8 @@ from flask import Flask, session, request, redirect, jsonify
 from ncu_oauth import oauth
 
 NCU_APP_REDIRECT_URI = 'http://127.0.0.1:5000/auth' 
-# NCU_APP_CLIENT_ID = 'your client id' 
-# NCU_APP_CLIENT_SECRET = 'your client secret'
+NCU_APP_CLIENT_ID = 'your client id' 
+NCU_APP_CLIENT_SECRET = 'your client secret'
 
 app = Flask(__name__)
 app.secret_key = 'your secrey key'
