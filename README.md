@@ -1,8 +1,8 @@
 # NCU_Oauth_with_Flask
 
-先到 Portal 的 Apps 申請一個新的應用程式，取得 client id 與 client secret
+先到 Portal 右上角的 Apps 申請一個新的應用程式，取得 client id 與 client secret
 
-在 App 的編輯頁面設定 Return To Address (也就是 Redirect_uri ) 為自己的 domain 網址。 
+在 App 的編輯頁面 Return To Address (也就是 Redirect_uri ) 設定為自己的 domain 網址。 
 
 EX: http://127.0.0.1:5000/auth
 
@@ -59,3 +59,30 @@ def auth():
 if __name__ == "__main__":
     app.run(host='0.0.0.0',debug=True)
 ```
+
+到 https://portal.ncu.edu.tw/about/howto 查看自己想要取得的 scope 
+
+在 oauth.py 中 ``` get_cdoe_url ``` 的 scope=加上自己想要的項目 (項目要兩個以上，只有一個會出錯，我也不知道為什麼= =)
+
+p.s.記得在 Portal Apps 的介面勾選自己想開通什麼 scopes 
+```python  
+get_code_url = OAUTH_URL + '/oauth2/authorization?response_type=code&scope=identifier+chinese-name&client_id='+self.client_id+'&redirect_uri='+self.redirect_uri
+```
+成功取得資訊後應該會得到類似下面的 json 資料
+
+```json
+{
+    "accountType": "STUDENT",
+    "chineseName": "周校長",
+    "englishName": "Jay Chou",
+    "gender": "1",
+    "id": 156848316516847,
+    "identifier": "10804055555",
+    "studentId": "10804055555"
+}
+
+```
+
+
+
+
